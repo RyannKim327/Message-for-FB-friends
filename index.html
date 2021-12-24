@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Sample</title>
+<meta name="viewport"  content="width=device-width, initial-scale=1, minimal-ui">
+<style type="text/css">
+*{
+outline: 0;
+}
+body{
+background-color: black;
+color: white;
+}
+.a, .a input{
+background-color: #131320;
+background-image: linear-gradient(to bottom right, #131320 50%, #9090de);
+border: 2px ridge white;
+border-radius: 16px;
+padding-left: 8px;
+padding-right: 8px;
+}
+.a h3, .a h5{
+padding: 0;
+margin: 0;
+}
+.a h5{
+padding-left: 15px;
+}
+.a input{
+background: transparent;
+margin: 5px;
+color: white
+}
+.b{
+margin-top: 5px;
+margin-bottom: 5px;
+}
+</style>
+</head>
+<body>
+<div class="a">
+<h3>Hello</h3>
+<h5>Welcome to my simple project</h5>
+</div>
+<div class="a b" align="center" id="base">
+<h4>A login form</h4>
+<input type="text" id="name" placeholder="Username" readonly><br>
+<input type="password" id="pass" placeholder="Enter password here" onkeyup="gg();"><br>
+<input type="hidden" id="go" value="Check the message" onclick="go();">
+</div>
+<div class="a b" id="base2" style="display: none;">
+<h3>Good day!!!</h3>
+<p>&emsp;Some of you know me or being with me, I think 5 to 6 months, and I was happy, to have you all. This is not a short, or even a long message, just simple message for you all. And as request, if ever you got this message, thru the inbox, please don't post this.</p>
+<p>&emsp;First of all, thank you for being my friend, to all of you. What I did isn't enough as gift of appreciation. All of you didn't just a friend, but a family to me. </p>
+<p id="myname"></p>
+<p id="mess"></p>
+<p>&emsp;To be honest, all of those messages are not enough as what you did to my life, as how do I wanna escape my stupid life. Helping you isn't enough still, it is just knowledge, but you give to me is a family, which is I want to have, also a treasure to me.</p>
+</div>
+</body>
+<script type="text/javascript">
+a = (id) => {
+return document.getElementById(id);
+}
+var x = -1;
+const b = [
+"Antiguo, John Jeremy",
+"Armenta, Maria Vele",
+"Bauat, April",
+"Calimlim, John Roy",
+"Candelaria, Andrei",
+"Cabaguing, Jericho",
+"Dela Cruz, Kyla Crisel",
+"Dinopol, Sanz",
+"Familiara, Jenevem",
+"Francisco, Rovie",
+"Garcia, Lloyd Samuel",
+"Lee, Drake",
+"Naldo, Loiza Marie",
+"Perriras, Ricalyn",
+"Queens Pride",
+"Salazar, Mart Anthony",
+"Tapia, Jonel",
+"Tecson, Justin Ed Pierre",
+"Tuneskie, Fortzkie",
+]
+const p = [
+"My Mentor since 2017",
+"A lady from Pio Duran Albay",
+"My coffee baby buddy",
+"My Greatest Mentor",
+"Ming ming swswswsw 2021",
+"Its echo 2021",
+"My Twin, My Friend",
+"Mentor in designing 2017",
+"My babe, from Pinoy Programmers",
+"My mentor with Einstein brain",
+"Our Ka-BSIT Fam teacher",
+"My sweet and thoughful young bro",
+"Sanaol po, mamaw na",
+"Our mayora, from Pangasinan",
+"The Pride of Ka-BSIT Fam",
+"A silent pro of Ka-BSIT Fam",
+"The springboot senpai",
+"My Linux Friend",
+"My honest mentor",
+]
+const m = [
+"You've been one of my internet friend since 2017, and you're my mentor too. We share thoughts, also ideas which are helped me to this journey. Just be humble always, and see you soon, personally, and maybe to my next dummy. Also, thank you for hiding who I am.",
+"Hi, first thing is, I want to thank you. Becoz of you, I created a game named, look for my dummy. Still remember the first time I add you using Rheign Kimmy, you unfriended me, which is a great pleassure to me, which is a good thing that someone don't know me still. Sorry, you know that issue, between the three of us, I can't talk to you still, not just becoz of pride, but I was shy to those mess I've made too. ",
+"Speechless. A thing I can say. Even I want to help you, you're still shy. Thank you for being my Ate Baby also being my coffee buddy, as I feel I have a family friend too. Although we haven't chats this past weeks/months, still thank you. And I was hoping that soon, we're having coffee together, even in virtual.",
+"Thank you for being my mentor, and adviser since 2018. I learn so much and most of it is becoz of you. Thank you for letting me in to Queens Pride's group, where I got more friends and family.",
+"I know you since the first time I used you're webview guide. But I only know you from names. By the way, thank you still, you're being a friend to me.",
+"Thank you, even you chat me just to ask, it still helps to me to my memory lost.",
+"It's been 4 to 5 months, since I was your dummy, but thank you for offering to be you for this pass months. Thank you for being my sister and being my mate as your twin. Thank you for being a friend, and a family. Helping you isn't enough for the offer you gave me before, although I don't want too, cause I still having personal issue that time, but still I try to accept your offer. Thank you, and always remember, you're too strong woman, you can do and achieve all of your dreams.",
+"Thank you for being my friend, although we don't have enough time to talk, becoz of our duties, but we can still. Thank you for being my friend, and hoping soon, all of us, modders and developers will met soon. Also, thank you for hiding who I am.",
+"Thank you for being true to me, saying what is/are my mistakes. And to my survey, thank you for answering my questions, you already know what it is.",
+"Hey there my greatest mentor, don't forget to eat sometimes. I want you to graduate to your course, and teach me soon with those ideas you've got, just like collaborations. By the way, thank you for being there, hoping that someday, we will have hand shakes not becoz of being friend, but also as a mate. Also, thank you for hiding who I am.",
+"Teacher, thank you too, for being there, and I ain't fell that I'm useless. Thank you for those appreciations.",
+"Oh my sweet little bro. You have a lot of problems, from modules upto internet connectivity. But don't forget to pray always, God will help you, to be a successful boy. Don't get mad to your ate, they are just busy, but always chat them like good morning. And dont forget, I will be by your side, I'm looking for you if I know you need me.",
+"Sorry, I can't help you still, but thank you for being underatanding. I know your abilit, and I know you can do it, that's how I trust to your ability.",
+"Mayoraaaa, never forget to take some rest too. You're always naloloka, and sometimes, nabubuang na. But take this serious, as a your friend too, don't forget to rest, you know how I'm concern to you specially to your health, all of you. Always be an ate, but not too much, as what I told to you before, it might be worst. Always eat, to makes you not thin.",
+"Hi ate, a simple word for you. Thank you and Sorry. That's it. Sorry coz I'm not active this past weeks. And thank you for giving me those meanings which is I dunno. Thank you for being my ate, as in. Coz you guide me, and you're being my friend too.",
+"We aren't talking unlike others, but you have still contributions to  me, and also priceless. You alsi teached me how to help others better, unlike what I did before.",
+"Thank you, and I hope soon that our plan will happened as having a collaboration project.",
+"Hi mate, thank you for keeping my experiences secret. Thank you for those idea about Linux, and dual boots.",
+"It's been so long, I missed your works again. When you were continue your app developing again? I still wait too, coz most of my knowledge is came to you too, as what Antiguo ang John Roy contributed. By the way, thank you, for those guides and for correcting my mistakes, it helps so much."
+]
+function gg(){
+for(let c = 0; c < p.length; c++){
+if(a("pass").value == p[c]){
+a("name").value = b[c]
+x = c
+break;
+}else{
+a("name").value = ""
+}
+}
+if(a("name").value != ""){
+a("go").type = "button";
+}else{
+a("go").type = "hidden";
+}
+}
+function go(){
+a("base").style.display = "none"
+a("base2").style.display = "block"
+a("myname").textContent = "To: " + a("name").value
+a("mess").innerHTML = "&emsp;" +  m[x]
+}
+</script>
+</html>
